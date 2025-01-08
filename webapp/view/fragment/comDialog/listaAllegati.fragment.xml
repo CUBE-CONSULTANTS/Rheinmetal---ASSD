@@ -1,0 +1,35 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<Dialog
+    contentHeight="500px"
+    contentWidth="600px"
+		title="{i18n>ListaAllegati}"
+	>
+  <List items="{allegatiDialog>/allegati}" growing="true" growingThreshold="50">
+    <CustomListItem type="Active" press="onSelectAllegato" 
+    >
+      <content>
+            <HBox>
+                <VBox class="sapUiSmallMarginBegin sapUiSmallMarginTopBottom">
+                  <Title text="{allegatiDialog>DOCFILE}"/>                                      
+                </VBox>
+            </HBox>
+        </content>
+    </CustomListItem>
+     </List>
+
+    <footer>
+     <Toolbar
+      width="100%"
+     >
+         <content>
+          <ToolbarSpacer
+          />
+            <Button text="{i18n>Chiudi}" press="onCloseDialog" />
+         </content>
+     </Toolbar>
+    </footer>
+</Dialog>
+</c:FragmentDefinition>

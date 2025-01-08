@@ -1,0 +1,20 @@
+<mvc:View
+    controllerName="rheinmetalassd.controller.QualificaForn"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:mvc="sap.ui.core.mvc"
+    height="100%"
+    displayBlock="true">
+    <f:FlexibleColumnLayout id="fcl" stateChange="onStateChanged"
+    layout="{layoutModel>/layout}"
+    backgroundDesign="Translucent"
+    >
+        <f:beginColumnPages>
+            <mvc:XMLView viewName="rheinmetalassd.view.Master" id="master"/>
+        </f:beginColumnPages>
+        <f:midColumnPages>
+            <mvc:XMLView viewName="rheinmetalassd.view.Home" id="home"/>
+          </f:midColumnPages>
+    </f:FlexibleColumnLayout>
+
+</mvc:View>

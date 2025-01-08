@@ -1,0 +1,15 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+  xmlns:c="sap.ui.core"
+  xmlns:f="sap.f"
+>
+<f:DynamicPageTitle >
+  <f:heading>
+    <Image class="sapUiTinyMarginBegin" src="./public/images/login.svg"></Image>
+  </f:heading>
+  <f:actions>
+    <ToolbarSpacer></ToolbarSpacer>
+    <Image src="./public/images/Rheinmetall_Logo_2021.jpg" width="130.0000px"></Image>
+  </f:actions>
+</f:DynamicPageTitle>
+</c:FragmentDefinition>

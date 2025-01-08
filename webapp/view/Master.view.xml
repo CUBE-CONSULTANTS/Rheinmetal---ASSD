@@ -1,0 +1,26 @@
+<mvc:View controllerName="rheinmetalassd.controller.Master"
+xmlns="sap.m"
+xmlns:f="sap.f"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:core="sap.ui.core"
+height="100%"
+displayBlock="true">
+
+<f:DynamicPage showFooter="true"
+    backgroundDesign= "List"
+    preserveHeaderStateOnScroll="false"
+    toggleHeaderOnTitleClick="true">
+    <f:header>
+        <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.master.Header"
+            type="XML" />
+    </f:header>
+    <f:content>
+        <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.master.Routing"
+            type="XML" />
+    </f:content>
+    <f:footer>
+        <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.master.Footer"
+            type="XML" />
+    </f:footer>
+</f:DynamicPage>
+</mvc:View>

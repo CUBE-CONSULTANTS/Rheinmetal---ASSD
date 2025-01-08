@@ -1,0 +1,100 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<Table
+      sticky="HeaderToolbar,ColumnHeaders"
+      growing="true"
+      autoPopinMode="true"
+      items="{docuModel>/doc}"
+      noDataText="{i18n>noDocF}"
+      > 
+     
+      <columns>
+        <Column width="80px"  hAlign="Left">
+          <Text  text="{i18n>Descrizione}" />
+        </Column>
+        <Column width="60px"  hAlign="Center">
+          <Text text="{i18n>Scarica}" />
+        </Column>
+        <Column width="100px"  hAlign="Left" visible="{= ${user>/tipoUtente} === 'Interno' ? true : false }">
+          <Text text="{i18n>Validazione}" />
+        </Column>
+        <Column width="60px"  hAlign="Center" visible="{= ${user>/tipoUtente} === 'Interno' ? false : true }">
+          <Text text="{i18n>Allega}" />
+        </Column>
+        <Column width="40px"  hAlign="Center">
+          <Text text="{i18n>Stato}" />
+        </Column>
+        <Column width="60px" hAlign="Center" visible="{= ${user>/tipoUtente} === 'Interno' ? true : false }">
+          <Text text="{i18n>DataCaricamento}"  />
+          </Column>   
+          <Column width="60px"  hAlign="Center" visible="{= ${user>/tipoUtente} === 'Interno' ? false : true }">
+            <Text text="{i18n>Esito}" />
+          </Column>
+          <Column width="90px" hAlign="Center">
+            <Text text="{i18n>DataInizio}" />
+          </Column> 
+        <Column width="90px" hAlign="Center">
+        <Text text="{i18n>Scadenza}" />
+      </Column> 
+            
+      </columns>
+      <items>
+        <ColumnListItem>
+          <cells>
+            <Text text="{docuModel>DARTXT}" />
+          </cells>
+          <cells>
+            <Button
+                enabled="{docuModel>enabled}"
+                icon="sap-icon://download"
+                type="Emphasized"
+                press="onDownloadAllegati"
+            />
+          </cells>
+          <cells>          
+            <ComboBox editable="{docuModel>enabledsel}" width="150px" 
+               items="{path: 'docuModel>validazione/items', templateShareable: false}"
+               value="{docuModel>validazione/value}"  >
+              <c:Item  key="{docuModel>key}" text="{docuModel>text}"/>
+            </ComboBox>
+          </cells>
+          <cells>
+            <Button
+                type="Emphasized"
+                icon="sap-icon://upload"   
+                press="onOpenMaskAllega"     
+                enabled="{docuModel>enabledUp}"        
+            />
+          </cells>
+          <cells>
+            <c:Icon
+                alt="Download"              
+                size="1.3rem"
+                src="{docuModel>STATO}"
+                color="{docuModel>colore}"         
+            />
+            
+          </cells>
+          <cells>
+            <Text text="{
+              path: 'docuModel>DATA_CREA'
+            }" 
+             />
+          </cells>
+          <cells>
+            <Text text="{docuModel>DOSTX}" />
+          </cells>
+          <cells >
+            <Text textAlign="Center" text="{docuModel>DATA_INI}" />
+          </cells>
+          <cells >
+            <Text textAlign="Center" text="{docuModel>DATA_SCAD}" />
+          </cells>
+          
+        </ColumnListItem>
+      </items>
+      </Table>
+
+</c:FragmentDefinition>

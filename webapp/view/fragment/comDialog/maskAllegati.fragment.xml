@@ -1,0 +1,85 @@
+<c:FragmentDefinition
+  xmlns="sap.m"
+  xmlns:c="sap.ui.core"
+  xmlns:f="sap.ui.layout.form"
+  xmlns:u="sap.ui.unified"
+>
+  <Dialog
+    contentWidth="600px"
+    title="{i18n>AggiungiAllegato}"
+  >
+    <f:SimpleForm
+      class="sapUiTinyMarginTopBottom"
+      editable="false"
+      layout="ResponsiveGridLayout"
+      labelSpanXL="3"
+      labelSpanL="3"
+      labelSpanM="3"
+      labelSpanS="12"
+      adjustLabelSpan="false"
+      emptySpanXL="4"
+      emptySpanL="4"
+      emptySpanM="4"
+      emptySpanS="0"
+      columnsXL="1"
+      columnsL="1"
+      columnsM="1"
+      singleContainerFullSize="false"
+    >
+      <f:content>
+        <VBox width="100%">
+          <HBox
+            width="100%"
+            alignItems="Center"
+            justifyContent="SpaceBetween"
+          >
+            <Label
+              design="Bold"
+              text="{i18n>TitoloDoc}*:"
+            />
+            <Input value="{upDetailAll>/DOCFILE}" width="20rem"/>
+          </HBox>
+          <HBox
+            width="100%"
+            alignItems="Center"
+            justifyContent="SpaceBetween"
+          >
+            <Label
+              design="Bold"
+              text="{i18n>File}*:"
+            />
+            <u:FileUploader
+              width="20rem"
+              iconOnly="true"
+              icon="sap-icon://search"
+              style="Emphasized"
+              placeholder="{i18n>Sfoglia}"
+              value="{upDetailAll>/FILE}"
+              change="onFileRdoOdaChange"
+            />
+          </HBox>
+          <HBox>
+            <Label text="(*)
+               {i18n>Campiobbligatori}" />
+          </HBox>
+        </VBox>
+      </f:content>
+    </f:SimpleForm>
+    <footer>
+      <Toolbar width="100%">
+        <content>
+          <ToolbarSpacer />
+          <Button
+            icon="sap-icon://upload"
+            type="Emphasized"
+            press="onUploadRdoOda"
+          />
+          <Button
+            text="{i18n>Chiudi}"
+            press="onCloseDialog"
+          />
+        </content>
+      </Toolbar>
+    </footer>
+  </Dialog>
+</c:FragmentDefinition>

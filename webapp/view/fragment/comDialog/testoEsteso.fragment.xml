@@ -1,0 +1,16 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+	<Popover
+		class=" sapUiResponsivePadding--content"
+		placement="Auto"
+		showHeader="false"    
+	>
+    <VBox 
+    >
+    <Text class="sapUiResponsiveMargin" text="{testiPopover>/testo}"/>
+    </VBox>
+		
+	</Popover>
+</c:FragmentDefinition>

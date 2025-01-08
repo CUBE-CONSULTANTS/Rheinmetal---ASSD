@@ -1,0 +1,8 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<OverflowToolbar class="footer" design="Solid" style="Standard" >
+  <Button visible="false" text="LogOut" type="Neutral" icon="sap-icon://log" press="onLogOutButtonPress" ></Button>
+</OverflowToolbar>
+</c:FragmentDefinition>

@@ -1,0 +1,34 @@
+<core:FragmentDefinition
+xmlns="sap.m"
+xmlns:core="sap.ui.core"
+>
+<TableSelectDialog
+multiSelect="false"
+  contentHeight="50%"
+  contentWidth="30%"
+  title="{i18n>selezionaCodiceFornitore}"
+  search=".handleSearchForn"
+  confirm="onConfirmFilter"
+  cancel=".handleClose"
+  items="{CommonMcModel>/filterbar/Fornitore/items}"
+>
+  <columns>
+    <Column>
+      <header>
+        <Text text="{i18n>CodiceFornitore}" />
+      </header>
+    </Column>
+    <Column visible="{= ${Main>/isRdo} || ${Main>/isOda} ? true : false}">
+      <header>
+        <Text text="{i18n>Descrizione}" />
+      </header>
+    </Column>
+  </columns>
+  <ColumnListItem>
+    <cells>
+      <Text text="{CommonMcModel>LIFNR}" />
+        <Text text="{CommonMcModel>NAME1}" />  
+    </cells>
+  </ColumnListItem>
+</TableSelectDialog>
+</core:FragmentDefinition>

@@ -1,0 +1,58 @@
+/* Enter your custom styles here */
+.margin{
+  margin: auto;
+}
+.page content{
+  border: 3px solid black!important
+}
+.welcome{
+  /* font-size: larger; */
+  font-weight: 700;
+}
+.footer{
+  background: #305074!important;
+}
+.footer span{
+  color: antiquewhite!important;  
+}
+#__section1-title .sapUxAPObjectPageSectionTitle{
+  color: blue!important;
+  margin-left: 250px!important;
+  visibility: visible!important;
+}
+.custBtn{
+  /* margin-left: 245px!important; */
+  background: red!important;
+}
+.custTable{
+  margin: auto;
+}
+.custText {
+  font-weight: bold;
+}
+.custText .sapMSLIImgIcon{
+  font-size: 1.3rem!important
+}
+.custTile{
+  background-color: #e4e4e4;
+}
+.custTile span {
+  font-weight: bold!important
+}
+/* .prova {
+  background: red !important;
+} */
+/* .sapMSLI {
+  height: 10vh !important; 
+   font-size: larger !important; 
+   font-weight: 900 !important;
+}
+   */
+/* #__toolbar1 {
+  background: transparent !important;
+  height: 6vh !important;
+} */
+.uploader:first-child {
+  padding-top: 0.28rem !important;
+}
+

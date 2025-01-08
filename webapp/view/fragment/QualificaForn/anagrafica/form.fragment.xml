@@ -1,0 +1,187 @@
+<core:FragmentDefinition xmlns:odata="sap.ui.comp.odata"
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
+  xmlns:core="sap.ui.core"
+  xmlns:f="sap.ui.layout.form"
+>
+<VBox>
+  <f:Form>
+    <f:layout>
+      <f:ResponsiveGridLayout
+          labelSpanXL="3"
+					labelSpanL="4"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="1"
+					emptySpanM="1"
+					emptySpanS="0"
+					columnsXL="3"
+					columnsL="3"
+					columnsM="2"
+          backgroundDesign="Solid"
+					singleContainerFullSize="false"
+          
+           />
+    </f:layout>
+<f:formContainers  >
+<f:FormContainer title="{i18n>info}" >
+<f:formElements>
+  <f:FormElement label="{i18n>CodiceFornitore}">
+    <f:fields>
+      <Input value="{anagraficaModel>/LIFNR}" editable="false" />
+    </f:fields>
+  </f:FormElement>
+    <f:FormElement label="{i18n>Nome}">
+      <f:fields>
+        <Input value="{anagraficaModel>/NAME1}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <f:FormElement label="{i18n>Via}" >
+      <f:fields>
+        <Input value="{anagraficaModel>/STREET}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <f:FormElement label="{i18n>CAP}" >
+      <f:fields>
+        <Input value="{anagraficaModel>/POST_CODE1}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <f:FormElement label="{i18n>Comune}">
+      <f:fields>
+        <Input value="{anagraficaModel>/CITY1}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <f:FormElement label="{i18n>Provincia}">
+      <f:fields>
+        <Input value="{anagraficaModel>/REGION}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <f:FormElement label="{i18n>Stato}">
+      <f:fields>
+        <Input value="{anagraficaModel>/COUNTRY}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <f:FormElement label="{i18n>Lingua}">
+      <f:fields>
+        <Input value="{anagraficaModel>/LANGU}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+    </f:formElements>
+    </f:FormContainer>
+
+     <f:FormContainer  title="{i18n>Contatti}" >
+    <f:formElements>
+      
+    <f:FormElement label="{i18n>Telefono}">
+      <f:fields>
+        <Input value="{anagraficaModel>/TELF1}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <!-- <f:FormElement label="{i18n>Fax}" >
+      <f:fields>
+        <Input value="{anagraficaModel>/TELFX}" editable="false" />
+      </f:fields>
+    </f:FormElement> -->
+
+    <f:FormElement label="{i18n>emailComm}">
+      <f:fields>
+        <Input value="{anagraficaModel>/SMPT_ADDR1}" editable="false" />
+      </f:fields>
+    </f:FormElement>  
+
+    <f:FormElement label="{i18n>emailAmm}">
+      <f:fields>
+        <Input value="{anagraficaModel>/SMPT_ADDR2}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+    
+    <f:FormElement label="{i18n>emailQual}">
+      <f:fields>
+        <Input value="{anagraficaModel>/SMPT_ADDR3}" editable="false" />
+        </f:fields>
+    </f:FormElement>  
+    <!-- <f:FormElement >
+      <f:fields>
+        <HBox width="100%" justifyContent="End"
+        visible="{= ${user>/tipoUtente} === 'Interno' ? false : true }"
+        >
+      
+        <Button         
+        class="sapUiTinyMarginEnd"  
+        icon="sap-icon://edit"
+        text="{i18n>Modifica}"
+        type="Emphasized"
+        width="100px"
+        press="onUpdateEmail"
+        />
+        <Button  
+        class="sapUiTinyMarginEnd"  
+        icon="sap-icon://accept"
+        text="{i18n>Salva}"
+        type="Emphasized"
+        width="100px"
+        press="onSaveEmail"
+        />
+      </HBox>
+        
+        </f:fields>
+    </f:FormElement>  -->
+  </f:formElements>
+</f:FormContainer>
+
+<f:FormContainer title="{i18n>DatiFiscali}:" >
+  <f:formElements>
+    <f:FormElement label="{i18n>PIVA}">
+      <f:fields>
+        <Input value="{anagraficaModel>/STCEG}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+
+    <f:FormElement label="{i18n>IBAN/CodSWIFT}">
+      <f:fields>  
+        <Input value="{anagraficaModel>/IBAN}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+    <f:FormElement label="{i18n>DUNS}">
+      <f:fields>
+        <Input value="{anagraficaModel>/DUNS}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+    <f:FormElement label="{i18n>GruppoConti}">
+      <f:fields>
+        <Input value="{anagraficaModel>/GRCONTI}" editable="false" />
+      </f:fields>
+    </f:FormElement>
+    <!-- <f:FormElement label="{i18n>RiferimentoBuyer}" >
+      <f:fields>
+        <ComboBox  items="{
+					path: 'anagraficaModel>/0/buyer'
+				}"
+        enabled="{= ${user>/tipoUtente} === 'Interno' ? false : true }">
+				<core:Item key="{anagraficaModel>key}" text="{anagraficaModel>text}" />
+			</ComboBox>
+      <Input value="{anagraficaModel>/VERKF}" editable="false" />
+      </f:fields>
+    </f:FormElement> -->
+ 
+    <!-- <f:FormElement label="{i18n>Validitaudit}" >
+      <f:fields>
+        <CheckBox selected="{anagraficaModel>/AUDIT}" enabled="false" />
+      </f:fields>
+    </f:FormElement> -->
+  </f:formElements>
+</f:FormContainer>
+
+</f:formContainers>
+  </f:Form>
+</VBox>
+</core:FragmentDefinition>

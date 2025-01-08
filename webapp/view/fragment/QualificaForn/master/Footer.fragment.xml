@@ -1,0 +1,11 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <OverflowToolbar class="footer"  >
+        <Title text="Utente: {user>/nome}" class="footer text" />        
+        <ToolbarSpacer />
+        <Button 	text="{i18n>Esci}"
+          icon="sap-icon://undo"
+            type="Emphasized"
+            press=".onExitPress" />
+    </OverflowToolbar>
+</core:FragmentDefinition>

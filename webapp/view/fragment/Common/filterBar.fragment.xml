@@ -1,0 +1,133 @@
+<c:FragmentDefinition
+xmlns="sap.m"
+xmlns:c="sap.ui.core"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns:f="sap.f"
+xmlns:fb="sap.ui.comp.filterbar"
+>
+<f:DynamicPageHeader pinnable="false">
+<fb:FilterBar
+id="commonFilterBar"
+search="onSearchData"
+clear="onResetFilterBar"
+showClearOnFB="true"
+useToolbar="false"
+showFilterConfiguration="false"
+filterContainerWidth="120px"
+>
+<fb:filterGroupItems>
+  <fb:FilterGroupItem
+    name="dateRange"
+    label="{i18n>Consegna}"
+    groupName="Filtri"
+    groupTitle="Filtri"
+    visibleInFilterBar="true"
+  >
+    <fb:control>
+      <DateRangeSelection
+        value="{
+          type: 'sap.ui.model.type.DateInterval',
+          formatOptions: {
+            pattern: 'dd/MM/yyyy'
+          },
+          parts: [{
+            type: 'sap.ui.model.type.Date',
+            path: '/start'
+          }, {
+            type: 'sap.ui.model.type.Date',
+            path: '/end'
+          }]
+        }"
+        dateValue="{Filtro>/begin}"
+        secondDateValue="{Filtro>/end}"
+        change="onChangeData"
+        displayFormat="dd/MM/yyyy"
+      />
+    </fb:control>
+  </fb:FilterGroupItem>
+  <fb:FilterGroupItem
+    name="Materiale"
+    label="{i18n>Materiale}"
+    groupName="Filtri"
+    groupTitle="Filtri"
+    visibleInFilterBar="true"
+  >
+    <fb:control>
+      <Input
+        value="{Filtro>/MATNR}"
+        change="onMatnrChange"
+      />
+    </fb:control>
+  </fb:FilterGroupItem>
+  <fb:FilterGroupItem
+  name="Fornitore"
+  label="{i18n>Fornitore}"
+  groupName="Filtri"
+  groupTitle="Filtri"
+  visibleInFilterBar="{= ${user>/tipoUtente} === 'Interno' ? true : false }"
+>
+  <fb:control>
+    <Input
+      value="{Filtro>/LIFNR}"
+      showValueHelp="true"   
+      valueHelpOnly="true"   
+      valueHelpRequest=".handleValueHelp"    
+      type="Number"
+    />
+  </fb:control>
+</fb:FilterGroupItem>
+<fb:FilterGroupItem
+name="Stato"
+label="{i18n>Stato}"
+groupName="Filtri"
+groupTitle="Filtri"
+visibleInFilterBar="true"
+>
+<fb:control>
+  <ComboBox
+      width="20rem"
+      selectedKey="{Filtro>/STATO}"
+      items="{CommonMcModel>/filterbar/Stato/items}"
+      change="onStatoChange"
+    >
+      <c:Item
+        key="{CommonMcModel>key}"
+        text="{CommonMcModel>text}"
+      />
+    </ComboBox>
+</fb:control>
+</fb:FilterGroupItem>
+<fb:FilterGroupItem
+  name="Richiesta"
+  label="{i18n>Richiesta}"
+  groupName="Filtri"
+  groupTitle="Filtri"
+  visibleInFilterBar="{= ${Main>/isRdo}? true : false }"
+>
+  <fb:control>
+    <Input
+    type="Number"
+      value="{Filtro>/EBELN}"
+      change="onRdoChange"
+    />
+  </fb:control>
+</fb:FilterGroupItem>
+<fb:FilterGroupItem
+name="Offerta"
+label="{i18n>Offerta}"
+groupName="Filtri"
+groupTitle="Filtri"
+visibleInFilterBar="{= ${Main>/isOda}? true : false }"
+>
+<fb:control>
+  <Input
+    type="Number"
+    value="{Filtro>/EBELN}"
+    change="onOdaChange"
+  />
+</fb:control>
+</fb:FilterGroupItem>
+</fb:filterGroupItems>
+</fb:FilterBar>
+</f:DynamicPageHeader>
+</c:FragmentDefinition>

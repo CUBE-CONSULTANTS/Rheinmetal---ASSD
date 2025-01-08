@@ -1,0 +1,25 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<OverflowToolbar  class="footer"    
+visible="{= ${user>/tipoUtente} === 'Interno' ? true : false }"         
+>
+    <Button                    
+        icon="sap-icon://nav-back"                    
+        text="{i18n>Indietro}"                  
+        type="Emphasized"
+        press="navToRicerca" 
+   />
+   <ToolbarSpacer
+
+/>
+<Button                    
+icon="sap-icon://navigation-right-arrow"  
+iconFirst="false"                  
+text="{i18n>vaiDoc}"                  
+type="Emphasized"
+press="navToDocumenti" 
+/>
+</OverflowToolbar>
+</c:FragmentDefinition>

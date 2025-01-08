@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+    xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns="sap.m"
+>
+    <f:DynamicPageHeader pinnable="true">
+      <core:Icon src="sap-icon://BusinessSuiteInAppSymbols/icon-requirement-model" size="1.5rem"></core:Icon>
+        <Title
+        class="sapUiSmallMarginBegin"
+        titleStyle="H3"
+            level="H3"
+            text="{i18n>GestioneDocumenti} - {docuModel>/nameForn} "
+            />
+    </f:DynamicPageHeader>
+</core:FragmentDefinition>

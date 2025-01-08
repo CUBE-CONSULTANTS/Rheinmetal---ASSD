@@ -1,0 +1,13 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+>
+<OverflowToolbar class="footer" >
+	<Button
+	type="Emphasized"
+	text="{i18n>Indietro}"
+	icon="sap-icon://undo"
+	press="onNavToMain"
+/>
+</OverflowToolbar>
+</c:FragmentDefinition>

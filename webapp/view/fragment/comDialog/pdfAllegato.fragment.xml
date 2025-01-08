@@ -1,0 +1,28 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+>
+    <Dialog title="{imageModel>/alt}">
+        <content>
+            <Image
+            visible="{imageModel>visibleImm}"
+                alt="{imageModel>/alt}"
+                height="auto"
+                src="{imageModel>/src}"
+                width="100%"
+            />
+
+        </content>
+        <footer>
+            <Toolbar width="100%">
+                <content>
+                    <ToolbarSpacer />
+                    <Button
+                        text="{i18n>Chiudi}"
+                        press="onCloseDialog"
+                    />
+                </content>
+            </Toolbar>
+        </footer>
+    </Dialog>
+</c:FragmentDefinition>

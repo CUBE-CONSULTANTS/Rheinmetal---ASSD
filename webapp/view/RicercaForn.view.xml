@@ -1,0 +1,26 @@
+<mvc:View controllerName="rheinmetalassd.controller.RicercaForn"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    height="100%"
+    displayBlock="true">
+    <f:DynamicPage showFooter="false"
+        preserveHeaderStateOnScroll="false"
+        toggleHeaderOnTitleClick="true">
+        <f:title>
+          <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.ricercaForn.Title"
+          type="XML" />          
+        </f:title>
+        <f:header>
+            <f:DynamicPageHeader>
+          <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.Common.filterbar"
+          type="XML" />
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>   
+            <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.ricercaForn.Content"
+                type="XML" />                
+        </f:content>       
+    </f:DynamicPage>
+</mvc:View>

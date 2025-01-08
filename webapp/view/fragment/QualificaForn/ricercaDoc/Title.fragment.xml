@@ -1,0 +1,20 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+  xmlns:f="sap.f"
+>
+<f:DynamicPageTitle >
+  <f:heading>
+    <HBox
+    >
+    <c:Icon src="sap-icon://detail-view" size="1.5rem"/>
+    <Title
+    class="sapUiSmallMarginBegin"
+        text="{i18n>CercaDoc}"
+        titleStyle="H3"
+    />
+    </HBox>
+    
+    </f:heading>
+</f:DynamicPageTitle>
+</c:FragmentDefinition>
