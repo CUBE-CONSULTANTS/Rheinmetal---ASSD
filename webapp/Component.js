@@ -3,8 +3,16 @@
  */
 
 sap.ui.define(
-  ["sap/ui/core/UIComponent", "sap/ui/Device", "rheinmetalassd/model/models"],
-  function (UIComponent, Device, models) {
+  [
+    "sap/ui/core/UIComponent",
+    "sap/ui/Device",
+    "./model/models",
+    "./model/API",
+    "sap/ui/core/IconPool",
+    "sap/ui/model/json/JSONModel",
+    "sap/m/MessageBox",
+  ],
+  function (UIComponent, Device, models, API, IconPool, JSONModel, MessageBox) {
     "use strict";
 
     return UIComponent.extend("rheinmetalassd.Component", {
