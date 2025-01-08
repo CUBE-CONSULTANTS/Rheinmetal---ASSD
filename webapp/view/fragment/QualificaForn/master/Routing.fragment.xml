@@ -1,15 +1,15 @@
 <core:FragmentDefinition xmlns:core="sap.ui.core"
     xmlns="sap.m">
     <List backgroundDesign="Transparent">
-        <StandardListItem class="custText" icon="sap-icon://form" title ="{= ${user>/tipoUtente} === 'Interno' ? ${i18n>AnagraficaFornitore} : ${i18n>Anagrafica} }"         
+        <StandardListItem class="custText" icon="sap-icon://form" title ="{i18n>Anagrafica}"         
             type="Navigation"
             press="onAnagraficaBtnPress"/>
         <StandardListItem class="custText" icon="sap-icon://curriculum" title="{i18n>Documenti}"       
             type="Navigation"
             press="onDocBtnPress" />
-        <StandardListItem class="custText" icon="sap-icon://add-document" title="{i18n>Template}"
+        <!-- <StandardListItem class="custText" icon="sap-icon://add-document" title="{i18n>Template}"
             visible="{= ${user>/tipoUtente} === 'Interno' ? true : false }" 
             type="Navigation"
-            press=".navToTemplate" />       
+            press=".navToTemplate" />        -->
     </List>
 </core:FragmentDefinition>

@@ -10,7 +10,7 @@
             class="sapUiSmallMarginBegin"
             titleStyle="H3"
             level="H3"
-            text="{i18n>AnagraficaFornitore} - {anagraficaModel>/NAME1} "
+            text="{i18n>AnagraficaFornitore}"
             />
         </f:content>  
     </f:DynamicPageHeader>
