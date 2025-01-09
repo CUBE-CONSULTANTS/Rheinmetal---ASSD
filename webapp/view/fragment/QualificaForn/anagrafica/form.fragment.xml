@@ -69,11 +69,11 @@
       </f:fields>
     </f:FormElement>
 
-    <f:FormElement label="{i18n>Lingua}">
+    <!-- <f:FormElement label="{i18n>Lingua}">
       <f:fields>
         <Input value="{anagraficaModel>/LANGU}" editable="false" />
       </f:fields>
-    </f:FormElement>
+    </f:FormElement> -->
     </f:formElements>
     </f:FormContainer>
 
@@ -98,17 +98,17 @@
       </f:fields>
     </f:FormElement>  
 
-    <f:FormElement label="{i18n>emailAmm}">
+    <!-- <f:FormElement label="{i18n>emailAmm}">
       <f:fields>
         <Input value="{anagraficaModel>/SMPT_ADDR2}" editable="false" />
       </f:fields>
-    </f:FormElement>
+    </f:FormElement> -->
     
-    <f:FormElement label="{i18n>emailQual}">
+    <!-- <f:FormElement label="{i18n>emailQual}">
       <f:fields>
         <Input value="{anagraficaModel>/SMPT_ADDR3}" editable="false" />
         </f:fields>
-    </f:FormElement>  
+    </f:FormElement>   -->
     <!-- <f:FormElement >
       <f:fields>
         <HBox width="100%" justifyContent="End"
@@ -146,21 +146,21 @@
       </f:fields>
     </f:FormElement>
 
-    <f:FormElement label="{i18n>IBAN/CodSWIFT}">
+    <!-- <f:FormElement label="{i18n>IBAN/CodSWIFT}">
       <f:fields>  
         <Input value="{anagraficaModel>/IBAN}" editable="false" />
       </f:fields>
-    </f:FormElement>
+    </f:FormElement> -->
     <f:FormElement label="{i18n>DUNS}">
       <f:fields>
         <Input value="{anagraficaModel>/DUNS}" editable="false" />
       </f:fields>
     </f:FormElement>
-    <f:FormElement label="{i18n>GruppoConti}">
+    <!-- <f:FormElement label="{i18n>GruppoConti}">
       <f:fields>
         <Input value="{anagraficaModel>/GRCONTI}" editable="false" />
       </f:fields>
-    </f:FormElement>
+    </f:FormElement> -->
     <!-- <f:FormElement label="{i18n>RiferimentoBuyer}" >
       <f:fields>
         <ComboBox  items="{
