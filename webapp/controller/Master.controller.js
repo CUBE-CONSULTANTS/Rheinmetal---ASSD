@@ -72,6 +72,7 @@ sap.ui.define(
               this.getOwnerComponent().getModel("user").getData().lifnr
             );
       },
+      
       onDocBtnPress: function () {
         this.getOwnerComponent().getModel("user").getProperty("/tipoUtente") ===
         "Interno"
@@ -80,6 +81,7 @@ sap.ui.define(
               this.getOwnerComponent().getModel("user").getData().lifnr
             );
       },
+
       onExitPress: function () {
         this.navToHome();
         this.getRouter().navTo("main");

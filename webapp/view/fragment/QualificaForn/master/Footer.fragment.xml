@@ -3,6 +3,10 @@
     <OverflowToolbar class="footer"  >
         <Title text="Utente: {user>/nome}" class="footer text" />        
         <ToolbarSpacer />
+        <Button class="sapUiLargeMarginBegin" 
+        
+        text="Espandi Schermo" press=".onExpandMidColumn" type="Emphasized" />
+        
         <Button 	text="{i18n>Esci}"
           icon="sap-icon://undo"
             type="Emphasized"

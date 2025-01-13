@@ -150,6 +150,20 @@ sap.ui.define(
       setOwnerComponent: function (oComponent) {
         this._oComponent = oComponent;
       },
+      onExpandMidColumn: function () {
+        debugger
+        let oFlexibleColumnLayout = this.getView().getParent().getParent()
+        oFlexibleColumnLayout.setLayout("MidColumnFullScreen");
+        let oLayoutModel = new JSONModel({
+          isExpanded: true  
+        });
+        this.getView().setModel(oLayoutModel, "layout");
+      },
+      onRestoreLayout: function () {
+        let oFlexibleColumnLayout = this.getView().getParent().getParent()
+        oFlexibleColumnLayout.setLayout("TwoColumnsBeginExpanded");
+        this.getView().getModel("layoutModel").setProperty("/isExpanded", false);
+      },
       onNavToMain: function (oEvent) {
         let filterbar = oEvent
           .getSource()

@@ -3,9 +3,11 @@
 	xmlns:c="sap.ui.core"
 >
 <OverflowToolbar  class="footer"    
-visible="{= ${user>/tipoUtente} === 'Interno' ? true : false }"         
+visible="true"         
 >
-    <Button                    
+<Button id="restoreButton" text="Ripristina Visualizzazione" press=".onRestoreLayout" 
+                      visible="{= ${layoutModel>/layout} === 'MidColumnFullScreen' }"/>
+    <!-- <Button                    
         icon="sap-icon://nav-back"                    
         text="{i18n>Indietro}"                  
         type="Emphasized"
@@ -13,13 +15,13 @@ visible="{= ${user>/tipoUtente} === 'Interno' ? true : false }"
    />
    <ToolbarSpacer
 
-/>
-<Button                    
+/> -->
+<!-- <Button                    
 icon="sap-icon://navigation-right-arrow"  
 iconFirst="false"                  
 text="{i18n>vaiDoc}"                  
 type="Emphasized"
 press="navToDocumenti" 
-/>
+/> -->
 </OverflowToolbar>
 </c:FragmentDefinition>

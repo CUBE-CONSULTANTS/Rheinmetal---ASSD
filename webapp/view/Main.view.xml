@@ -8,6 +8,7 @@
     <f:FlexibleColumnLayout id="fcl" stateChange="onStateChanged"
     layout="{layoutModel>/layout}"
     backgroundDesign="Translucent"
+    
     >
         <f:beginColumnPages>
             <mvc:XMLView viewName="rheinmetalassd.view.Master" id="master"/>

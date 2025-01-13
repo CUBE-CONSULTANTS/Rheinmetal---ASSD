@@ -17,8 +17,13 @@ xmlns="sap.m"
                 <VBox width="100%" alignItems="Center">
                     <Title titleStyle="H2" level="H2" text="{i18n>welcomeMessage}" />
                     <Title titleStyle="H2" level="H2" text="{i18n>welcomeMessage2} {user>/nome}" />
+                      <Button id="restoreButton" text="Ripristina Visualizzazione" press=".onRestoreLayout" 
+                      visible="{= ${layoutModel>/layout} === 'MidColumnFullScreen' }"/>
                 </VBox>
+                
             </VBox>
         </f:content>
+
+
     </f:DynamicPage>
 </mvc:View>

@@ -25,19 +25,19 @@ sap.ui.define(
         this.name = name;
         this.lifnr = lifnr;
         this.prevCopy = copy;
-        try {
-          let response = await API.getFornitore({ lifnr: lifnr });
-          response = response.FORNITORE;
-          if (response.AUDIT === "X") {
-            response.AUDIT = true;
-          } else {
-            response.AUDIT = false;
-          }
-          let oModel = this.getModel("anagraficaModel");
-          oModel.setData(Object.assign(oModel.getData(), response));
-        } catch {
-          MessageBox.error(this.getBundleText("messErr"));
-        }
+        // try {
+        //   let response = await API.getFornitore({ lifnr: lifnr });
+        //   response = response.FORNITORE;
+        //   if (response.AUDIT === "X") {
+        //     response.AUDIT = true;
+        //   } else {
+        //     response.AUDIT = false;
+        //   }
+        //   let oModel = this.getModel("anagraficaModel");
+        //   oModel.setData(Object.assign(oModel.getData(), response));
+        // } catch {
+        //   MessageBox.error(this.getBundleText("messErr"));
+        // }
       },
       navToRicerca: function () {
         this.oFC = this.getView().getParent().getParent();
