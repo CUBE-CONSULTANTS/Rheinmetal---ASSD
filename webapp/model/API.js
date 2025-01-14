@@ -1,7 +1,7 @@
 sap.ui.define([], function () {
   "use strict";
 
-  const bsp = "/sap/bc/bsp/sap/zui5_pfornitori";
+  const bsp = "/sap";
   const endpoint = bsp;
 
   return {
@@ -10,6 +10,8 @@ sap.ui.define([], function () {
         $.ajax({
           url: endpoint + entity,
           headers: {
+            "ACTION": "001",
+            "USER_AD": "marco.trotta",
             "sap-client": "500",
             "sap-sessioncmd": "open",
             Accept: "application/json",
