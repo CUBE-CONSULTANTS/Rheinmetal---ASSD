@@ -10,6 +10,8 @@ sap.ui.define([], function () {
         $.ajax({
           url: endpoint + entity,
           headers: {
+            ACTION: "001",
+            USER_AD: "marco.trotta",
             "sap-client": "500",
             "sap-sessioncmd": "open",
             Accept: "application/json",

@@ -19,18 +19,17 @@ framework:
     - name: themelib_sap_horizon
 server:
   customMiddleware:
-    - name: fiori-tools-appreload
+    - name: ui5-middleware-livereload
+      afterMiddleware: compression
+    - name: ui5-middleware-route-proxy
       afterMiddleware: compression
       configuration:
-        port: 35729
-        path: webapp
-        delay: 300
-    - name: fiori-tools-proxy
-      afterMiddleware: compression
-      configuration:
-        ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
-    - name: fiori-tools-preview
-      afterMiddleware: fiori-tools-appreload
-      configuration:
-        component: rheinmetalassd
-        ui5Theme: sap_horizon
+        debug: true
+        routes:
+        /sap/zassd_rest:
+          target: https://sapsvl.contraves.local:5200
+          secure: false
+          auth:
+            user: cixcube01
+            pass: cube01
+            client: "500"
