@@ -17,6 +17,20 @@ sap.ui.define(
         this.prevCopy = undefined;
         this.setModel(models.createMainModel(), "Main");
         this.setModel(models.CreateAnagraficaModel(), "anagraficaModel");
+        this.getView().setBusy(true);
+        let data = await API.getAnagrafica({
+          ACTION: "001",
+
+          USER_AD: "marco.trotta",
+        });
+
+        let anagrafica = data.zst_assd_cliente;
+        this.setModel(
+          new sap.ui.model.json.JSONModel(anagrafica),
+          "anagrafica"
+        );
+        debugger;
+        this.getView().setBusy(false);
       },
       onBeforeShow: async function (lifnr, name, copy, oComponent) {
         if (oComponent) {

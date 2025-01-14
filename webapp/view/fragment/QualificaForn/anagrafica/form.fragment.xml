@@ -30,48 +30,48 @@
 <f:formElements>
   <f:FormElement label="{i18n>CodiceFornitore}">
     <f:fields>
-      <Input value="{anagraficaModel>/LIFNR}" editable="false" />
+      <Input value="{anagrafica>/kunnr}" editable="false" />
     </f:fields>
   </f:FormElement>
     <f:FormElement label="{i18n>Nome}">
       <f:fields>
-        <Input value="{anagraficaModel>/NAME1}" editable="false" />
+        <Input value="{anagrafica>/name1}" editable="false" />
       </f:fields>
     </f:FormElement>
 
     <f:FormElement label="{i18n>Via}" >
       <f:fields>
-        <Input value="{anagraficaModel>/STREET}" editable="false" />
+        <Input value="{anagrafica>/stras}" editable="false" />
       </f:fields>
     </f:FormElement>
 
-    <f:FormElement label="{i18n>CAP}" >
+    <!-- <f:FormElement label="{i18n>CAP}" >
       <f:fields>
-        <Input value="{anagraficaModel>/POST_CODE1}" editable="false" />
+        <Input value="{anagrafica>/POST_CODE1}" editable="false" />
       </f:fields>
-    </f:FormElement>
+    </f:FormElement> -->
 
-    <f:FormElement label="{i18n>Comune}">
+    <!-- <f:FormElement label="{i18n>Comune}">
       <f:fields>
-        <Input value="{anagraficaModel>/CITY1}" editable="false" />
+        <Input value="{anagrafica>/ort01}" editable="false" />
       </f:fields>
-    </f:FormElement>
+    </f:FormElement> -->
 
     <f:FormElement label="{i18n>Provincia}">
       <f:fields>
-        <Input value="{anagraficaModel>/REGION}" editable="false" />
+        <Input value="{anagrafica>/ort01}" editable="false" />
       </f:fields>
     </f:FormElement>
 
     <f:FormElement label="{i18n>Stato}">
       <f:fields>
-        <Input value="{anagraficaModel>/COUNTRY}" editable="false" />
+        <Input value="{anagrafica>/land1}" editable="false" />
       </f:fields>
     </f:FormElement>
 
     <!-- <f:FormElement label="{i18n>Lingua}">
       <f:fields>
-        <Input value="{anagraficaModel>/LANGU}" editable="false" />
+        <Input value="{anagrafica>/LANGU}" editable="false" />
       </f:fields>
     </f:FormElement> -->
     </f:formElements>
@@ -80,33 +80,33 @@
      <f:FormContainer  title="{i18n>Contatti}" >
     <f:formElements>
       
-    <f:FormElement label="{i18n>Telefono}">
+    <!-- <f:FormElement label="{i18n>Telefono}">
       <f:fields>
-        <Input value="{anagraficaModel>/TELF1}" editable="false" />
+        <Input value="{anagrafica>/TELF1}" editable="false" />
       </f:fields>
-    </f:FormElement>
+    </f:FormElement> -->
 
     <!-- <f:FormElement label="{i18n>Fax}" >
       <f:fields>
-        <Input value="{anagraficaModel>/TELFX}" editable="false" />
+        <Input value="{anagrafica>/TELFX}" editable="false" />
       </f:fields>
     </f:FormElement> -->
 
     <f:FormElement label="{i18n>emailComm}">
       <f:fields>
-        <Input value="{anagraficaModel>/SMPT_ADDR1}" editable="false" />
+        <Input value="{anagrafica>/mail}" editable="false" />
       </f:fields>
     </f:FormElement>  
 
     <!-- <f:FormElement label="{i18n>emailAmm}">
       <f:fields>
-        <Input value="{anagraficaModel>/SMPT_ADDR2}" editable="false" />
+        <Input value="{anagrafica>/SMPT_ADDR2}" editable="false" />
       </f:fields>
     </f:FormElement> -->
     
     <!-- <f:FormElement label="{i18n>emailQual}">
       <f:fields>
-        <Input value="{anagraficaModel>/SMPT_ADDR3}" editable="false" />
+        <Input value="{anagrafica>/SMPT_ADDR3}" editable="false" />
         </f:fields>
     </f:FormElement>   -->
     <!-- <f:FormElement >
@@ -142,18 +142,18 @@
   <f:formElements>
     <f:FormElement label="{i18n>PIVA}">
       <f:fields>
-        <Input value="{anagraficaModel>/STCEG}" editable="false" />
+        <Input value="{anagrafica>/stcd2}" editable="false" />
       </f:fields>
     </f:FormElement>
 
     <!-- <f:FormElement label="{i18n>IBAN/CodSWIFT}">
       <f:fields>  
-        <Input value="{anagraficaModel>/IBAN}" editable="false" />
+        <Input value="{anagrafica>/IBAN}" editable="false" />
       </f:fields>
     </f:FormElement> -->
     <f:FormElement label="{i18n>DUNS}">
       <f:fields>
-        <Input value="{anagraficaModel>/DUNS}" editable="false" />
+        <Input value="{anagrafica>/vtext}" editable="false" />
       </f:fields>
     </f:FormElement>
     <!-- <f:FormElement label="{i18n>GruppoConti}">

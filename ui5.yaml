@@ -9,7 +9,12 @@ server:
     - name: fiori-tools-proxy
       afterMiddleware: compression
       configuration:
-        ignoreCertError: false # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        ignoreCertError: true # If set to true, certificate errors will be ignored. E.g. self-signed certificates will be accepted
+        backend:
+          - path: /sap/zassd_rest
+            url: https://sapsvl.contraves.local:5200
+            username: cixcube01
+            password: cube01
         ui5:
           path:
             - /resources
