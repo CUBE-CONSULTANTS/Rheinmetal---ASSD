@@ -15,6 +15,10 @@ server:
             url: https://sapsvl.contraves.local:5200
             username: cixcube01
             password: cube01
+          - path: /sap/zassd_rest
+            url: https://dazzling-liger-217edb.netlify.app
+            username: cixcube01
+            password: cube01
         ui5:
           path:
             - /resources
