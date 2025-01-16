@@ -1,4 +1,4 @@
-sap.ui.define([], function () {
+sap.ui.define(["./Auth"], function (Auth) {
   "use strict";
 
   const bsp = "/ias/sap";
@@ -46,7 +46,10 @@ sap.ui.define([], function () {
               reject(error);
             }
           },
-          error: (e) => reject(e),
+          error: (e) => {
+            reject(e);
+            Auth._redirectLaunchpad();
+          },
         });
       });
     },

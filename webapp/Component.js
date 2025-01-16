@@ -11,8 +11,18 @@ sap.ui.define(
     "sap/ui/core/IconPool",
     "sap/ui/model/json/JSONModel",
     "sap/m/MessageBox",
+    "./model/Auth",
   ],
-  function (UIComponent, Device, models, API, IconPool, JSONModel, MessageBox) {
+  function (
+    UIComponent,
+    Device,
+    models,
+    API,
+    IconPool,
+    JSONModel,
+    MessageBox,
+    Auth
+  ) {
     "use strict";
 
     return UIComponent.extend("rheinmetalassd.Component", {
@@ -30,7 +40,10 @@ sap.ui.define(
         this.setModel(models.createUserModel(), "user");
 
         //let prova = await API.createEntity({entity: "/zassd_rest"})
-        console.log(prova.toJSON());
+        let checkAuth = await Auth.checkAuth();
+        if (!checkAuth) {
+          Auth._redirectLaunchpad();
+        }
         // API.createEntity({
         //   entity: "/get_user_set.json",
         // })
