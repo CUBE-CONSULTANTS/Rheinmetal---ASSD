@@ -29,7 +29,7 @@ sap.ui.define(
         this.setModel(models.createLayoutModel(), "layoutModel");
         this.setModel(models.createUserModel(), "user");
 
-        let prova = await API.createEntity({entity: "/zassd_rest"})
+        //let prova = await API.createEntity({entity: "/zassd_rest"})
         console.log(prova.toJSON());
         // API.createEntity({
         //   entity: "/get_user_set.json",

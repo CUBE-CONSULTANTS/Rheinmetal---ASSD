@@ -1,17 +1,20 @@
 sap.ui.define([], function () {
   "use strict";
 
-  const bsp = " /sap/zassd_rest";
+  const bsp = "/ias/sap";
   const endpoint = bsp;
 
   return {
     createEntity: function ({ entity, data }) {
       return new Promise((resolve, reject) => {
+        const {
+          user_token: { value },
+        } = JSON.parse(localStorage.rheinmetall_user_data);
+
         $.ajax({
           url: endpoint + entity,
           headers: {
-            ACTION: "001",
-            USER_AD: "marco.trotta",
+            Authorization: `Bearer ${value}`,
             "sap-client": "500",
             "sap-sessioncmd": "open",
             Accept: "application/json",
@@ -50,7 +53,7 @@ sap.ui.define([], function () {
 
     getAnagrafica: async function (data) {
       return await this.createEntity({
-        entity: "/zst_assd_cliente.json",
+        entity: "/zst_assd_cliente",
         data: data,
       });
     },
