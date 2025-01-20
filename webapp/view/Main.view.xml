@@ -1,5 +1,5 @@
 <mvc:View
-    controllerName="rheinmetalassd.controller.QualificaForn"
+    controllerName="rheinmetalassd.controller.MasterData"
     xmlns="sap.m"
     xmlns:f="sap.f"
     xmlns:mvc="sap.ui.core.mvc"

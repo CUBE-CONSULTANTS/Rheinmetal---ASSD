@@ -28,7 +28,7 @@
 <f:formContainers  >
 <f:FormContainer title="{i18n>info}" >
 <f:formElements>
-  <f:FormElement label="{i18n>CodiceFornitore}">
+  <f:FormElement label="{i18n>Cliente}">
     <f:fields>
       <Input value="{anagrafica>/kunnr}" editable="false" />
     </f:fields>

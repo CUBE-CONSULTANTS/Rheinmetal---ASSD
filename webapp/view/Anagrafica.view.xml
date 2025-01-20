@@ -9,16 +9,16 @@
     preserveHeaderStateOnScroll="true"
         >
         <f:header>
-            <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.anagrafica.Header"
+            <core:Fragment fragmentName="rheinmetalassd.view.fragment.MasterData.anagrafica.Header"
             type="XML" />           
         </f:header>
         
         <f:content>
-            <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.anagrafica.form"
+            <core:Fragment fragmentName="rheinmetalassd.view.fragment.MasterData.anagrafica.form"
             type="XML" />
         </f:content>
         <f:footer>
-            <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.anagrafica.Footer"
+            <core:Fragment fragmentName="rheinmetalassd.view.fragment.MasterData.anagrafica.Footer"
             type="XML" />
         </f:footer>
     </f:DynamicPage>

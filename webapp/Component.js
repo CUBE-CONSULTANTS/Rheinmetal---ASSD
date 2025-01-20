@@ -80,23 +80,7 @@ sap.ui.define(
         b.push(IconPool.fontLoaded("BusinessSuiteInAppSymbols"));
         c["BusinessSuiteInAppSymbols"] = B;
       },
-      initializeUserRole: function () {
-        return API.getUserRole().then((resRole) => {
-          let role;
-          role = resRole.FORNITORE === "X" ? "Fornitore" : "Interno";
-          this.getModel("user").setProperty("/tipoUtente", role);
-          if (role === "Fornitore" && resRole.STATO === "R") {
-            this.getModel("user").setProperty("/stato", resRole.STATO);
-          }
-          if (
-            role === "Interno" &&
-            (resRole.STATO_RDO === "G" || resRole.STATO_ODA === "G")
-          ) {
-            this.getModel("user").setProperty("/stato_rdo", resRole.STATO_RDO);
-            this.getModel("user").setProperty("/stato_oda", resRole.STATO_ODA);
-          }
-        });
-      },
+
       /**
        * This method can be called to determine whether the sapUiSizeCompact or sapUiSizeCozy
        * design mode class should be set, which influences the size appearance of some controls.

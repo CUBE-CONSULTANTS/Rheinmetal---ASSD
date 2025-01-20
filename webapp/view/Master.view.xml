@@ -11,15 +11,15 @@ displayBlock="true">
     preserveHeaderStateOnScroll="false"
     toggleHeaderOnTitleClick="true">
     <f:header>
-        <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.master.Header"
+        <core:Fragment fragmentName="rheinmetalassd.view.fragment.MasterData.master.Header"
             type="XML" />
     </f:header>
     <f:content>
-        <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.master.Routing"
+        <core:Fragment fragmentName="rheinmetalassd.view.fragment.MasterData.master.Routing"
             type="XML" />
     </f:content>
     <f:footer>
-        <core:Fragment fragmentName="rheinmetalassd.view.fragment.QualificaForn.master.Footer"
+        <core:Fragment fragmentName="rheinmetalassd.view.fragment.MasterData.master.Footer"
             type="XML" />
     </f:footer>
 </f:DynamicPage>
