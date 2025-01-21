@@ -5,11 +5,11 @@ sap.ui.define(
 
     return BaseController.extend("rheinmetalassd.controller.MasterData", {
       onInit: async function () {
-        this.getRouter()
-          .getRoute("Main")
-          .attachPatternMatched(this._onObjectMatched, this);
+        // this.getRouter()
+        //   .getRoute("Main")
+        //   .attachPatternMatched(this._onObjectMatched, this);
       },
-      _onObjectMatched: async function (oEvent) {},
+      // _onObjectMatched: async function (oEvent) {},
     });
   }
 );

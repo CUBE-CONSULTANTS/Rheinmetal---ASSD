@@ -3,7 +3,7 @@
     <List backgroundDesign="Transparent">
         <StandardListItem class="custText" icon="sap-icon://form" title ="{i18n>Anagrafica}"         
             type="Navigation"
-            press="onAnagraficaBtnPress"/>
+            press="navToAnagrafica"/>
         <StandardListItem class="custText" icon="sap-icon://curriculum" title="{i18n>Documenti}"       
             type="Navigation"
             press="onDocBtnPress" />

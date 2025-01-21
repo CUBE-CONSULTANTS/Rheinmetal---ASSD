@@ -2,7 +2,10 @@ sap.ui.define(["./Auth"], function (Auth) {
   "use strict";
 
   const bsp = "/ias/sap";
+  const bspLocal = "/sap/zassd_rest";
+
   const endpoint = bsp;
+  const endpointLocal = bspLocal;
 
   return {
     createEntity: function ({ entity, data }) {
@@ -24,23 +27,8 @@ sap.ui.define(["./Auth"], function (Auth) {
           data: JSON.stringify(data),
           success: (res) => {
             try {
-              let parsedResponse;
-              if (typeof res === "string") {
-                const hasInvalidChars = /[\u0000-\u001F\u007F-\u009F]/.test(
-                  res
-                );
-                if (hasInvalidChars) {
-                  let cleanedResponse = res.replace(
-                    /[\u0000-\u001F\u007F-\u009F]/g,
-                    ""
-                  );
-                  parsedResponse = JSON.parse(cleanedResponse);
-                } else {
-                  parsedResponse = JSON.parse(res);
-                }
-              } else {
-                parsedResponse = res;
-              }
+              let parsedResponse = JSON.parse(res);
+
               resolve(parsedResponse);
             } catch (error) {
               reject(error);
@@ -54,8 +42,43 @@ sap.ui.define(["./Auth"], function (Auth) {
       });
     },
 
+    createEntityLocal: function ({ entity, data }) {
+      return new Promise((resolve, reject) => {
+        $.ajax({
+          url: endpointLocal + entity,
+          headers: {
+            "sap-client": "500",
+            "sap-sessioncmd": "open",
+            Accept: "application/json",
+          },
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify(data),
+          success: (res) => {
+            try {
+              let parsedResponse = JSON.parse(res);
+
+              resolve(parsedResponse);
+            } catch (error) {
+              reject(error);
+            }
+          },
+          error: (e) => {
+            reject(e);
+          },
+        });
+      });
+    },
+
     getAnagrafica: async function (data) {
       return await this.createEntity({
+        entity: "/zst_assd_cliente",
+        data: data,
+      });
+    },
+
+    getAnagraficaLocal: async function (data) {
+      return await this.createEntityLocal({
         entity: "/zst_assd_cliente",
         data: data,
       });

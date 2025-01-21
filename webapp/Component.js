@@ -39,24 +39,11 @@ sap.ui.define(
         this.setModel(models.createLayoutModel(), "layoutModel");
         this.setModel(models.createUserModel(), "user");
 
-        //let prova = await API.createEntity({entity: "/zassd_rest"})
+        // da commentare in caso di chiamata locale
         let checkAuth = await Auth.checkAuth();
         if (!checkAuth) {
           Auth._redirectLaunchpad();
         }
-        // API.createEntity({
-        //   entity: "/get_user_set.json",
-        // })
-        //   .then(({ SNAME, ORGEH, UNAME, LIFNR }) => {
-        //     this.getModel("user").setData({
-        //       id: UNAME,
-        //       nome: SNAME,
-        //       uo: ORGEH,
-        //       lifnr: LIFNR,
-        //     });
-        //   })
-        //   .catch(() => {});
-        // await this.initializeUserRole();
 
         // set icon pool
         const b = [];

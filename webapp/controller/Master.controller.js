@@ -10,12 +10,12 @@ sap.ui.define(
         this.oFC.toMidColumnPage(this.oFC.getMidColumnPages()[0]);
       },
 
-      navToAnagrafica: function (lifnr) {
+      navToAnagrafica: function () {
         this.oFC = this.getView().getParent().getParent();
         this.navigateToView(
           this.oFC,
           "rheinmetalassd.view.Anagrafica",
-          lifnr,
+          null,
           null,
           null,
           this.getOwnerComponent()

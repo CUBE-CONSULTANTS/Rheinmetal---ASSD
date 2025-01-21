@@ -18,11 +18,20 @@ sap.ui.define(
         this.setModel(models.createMainModel(), "Main");
         // this.setModel(models.CreateAnagraficaModel(), "anagraficaModel");
         this.getView().setBusy(true);
+
+        //chiamata per il middleware
         let data = await API.getAnagrafica({
           ACTION: "001",
 
           // USER_AD: "marco.trotta",
         });
+
+        // chiamata per il locale
+        // let data = await API.getAnagraficaLocal({
+        //   ACTION: "001",
+
+        //   USER_AD: "marco.trotta",
+        // });
 
         let anagrafica = data.zst_assd_cliente;
         this.setModel(

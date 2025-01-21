@@ -15,9 +15,9 @@
     "@sap/ux-ui5-tooling": "1"
   },
   "scripts": {
-    "start-prova": "set BROWSER=chrome && fiori run --open 'test/flpSandbox.html?sap-ui-xx-viewCache=false#rheinmetalassd-display'",
+    "start-local": "ui5 serve --config=ui5.yaml",
     "start": "fiori run --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#rheinmetalassd-display\"",
-    "start-local": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#rheinmetalassd-display\"",
+    "start-local2": "fiori run --config ./ui5-local.yaml --open \"test/flpSandbox.html?sap-ui-xx-viewCache=false#rheinmetalassd-display\"",
     "build": "ui5 build --config=ui5.yaml --clean-dest --dest dist",
     "deploy": "fiori verify",
     "deploy-config": "fiori add deploy-config",
